@@ -1,44 +1,28 @@
-# Vagrant
+# SeQueL to Python
 
-1. Download and install [Vagrant](https://www.vagrantup.com/downloads.html).
-2. Download and install [Virtualbox](https://www.virtualbox.org/wiki/Downloads).
-3. Download the vagrant box named ```vm.box``` which can be found under the "Releases" tab of this repository.
-4. Install [Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
-5. Change directory to the location of the box that you downloaded
-6. Add the box to vagrant your local vagrant in your terminal
-```bash
-vagrant box add --name adsa/python [path to downloaded box]
-```
+This repository constitutes the first beginner project. It includes sample
+code as well as a vagrant box development environment for you to use.
 
-7. Open a terminal (cmd.exe for windows, Terminal.app), cd to the directory where you cloned this repo 
-and run:
-```bash
-vagrant up
-```
-8. Login to the vagrant box
 
-For windows:
- - Run putty.exe
- - Connect edit the connection with
-  - Hostname: 127.0.0.1
-  - Port: 2222
-  - Connection Type: ssh
-  - Username: vagrant
-  - Password: vagrant
 
-For Linux/Mac OSX
- - Open your terminal (Terminal.app on Mac)
- - cd to the folder containing this git repo
- - Run: ```vagrant ssh```
+## High Level Instructions
+1. Fork this repository on github to track the changes you make
+2. Set up [vagrant](https://github.com/ADSA-UIUC/Resources/blob/develop/dev-environment/vagrant/setup.md) (Link may be broken)
+3. Gather data from any source on the web (Be careful of rate limits!)
+4. Store that data into the MySQL database installed on the vagrant box
+5. Push the code back to github!
 
-This will log you in to the virtual machine and give you console access. 
+## Step descriptions
+1. Download and install [git](https://git-scm.com/downloads)
+   - [Follow the instructions to fork the repo](https://help.github.com/articles/fork-a-repo/)
+   - Next, clone the repository from your command line via ``` git clone [url] ```
+2. Follow linked instructions from the "Resources" repository to use vagrant
+3. Take a look through the python examples. They include using a json api, using beautiful soup
+4. Read through the example ews.py store() function to get an idea of how to use MySQL
 
-### Notes
- - Files in the folder containing the Vagrantfile will be shared to the ```/vagrant``` folder in the 
-virtual machine, so you can edit files in your normal OS with your text editor of choice 
-(Sublime Text, Atom, etc.).
- - Run scripts in the virtual machine on the command line via ```python myscript.py```
- - Search for python packages via ```pip search [package name]```
- - Install packages on the virtual machine via ```sudo pip install [package name]```
- - Files in the box's ```/vagrant``` folder will be shared with your computer. So you can edit files
- on your computer and run it on the box.
+
+## Possible data sources
+ - [Riot Game's API](https://developer.riotgames.com/api/methods)
+ - [Twitter API](https://dev.twitter.com/overview/api)
+ - Any website's html (via [Beautiful Soup](http://www.crummy.com/software/BeautifulSoup))
+
